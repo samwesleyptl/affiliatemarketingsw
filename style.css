@@ -1,0 +1,64 @@
+/* Add your CSS styles here */
+body {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Limit container width */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border: 1px solid #333;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.reset-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: #45a049;
+}
+
+/* Media Query for Mobile Screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 90%;
+    }
+    .board {
+        grid-template-columns: repeat(3, minmax(30px, 1fr)); /* Adjust cell size */
+    }
+    .cell {
+        font-size: 16px; /* Adjust font size */
+    }
+}
